@@ -1,0 +1,193 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.body {
+    padding: 30px;
+    background-color: rgba(92, 64, 51);
+}
+
+.header__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 18px;
+    color: rgb(196, 164, 132);
+    width: 98vw;
+}
+
+.open_modal {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(196, 164, 132);
+    font-weight: bold;
+    color: rgb(92, 64, 51);
+    border: none;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.open_modal:hover {
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+    cursor: pointer;
+    color: black;
+}
+
+.library__title {
+    text-align: center;
+    color: rgb(196, 164, 132);
+    font-size: 40px;
+}
+
+.library__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+    align-items: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.book {
+    position: relative;
+    background-color: rgb(196, 164, 132);
+    color: rgb(92, 64, 51);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 300px;
+    min-height: 200px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    font-size: 18px;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.book:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px 15px rgba(0, 0, 0, 0.3);
+}
+
+.book__title {
+    font-weight: bold;
+}
+
+.new_book_modal.open {
+    visibility: visible;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    background-color: rgba(34, 33, 33, 0.514);
+    min-width: 100%;
+    min-height: 100%;
+}
+.new_book_modal.closed {
+    visibility: hidden;
+}
+
+.form__title {
+    color: rgb(92, 64, 51);
+}
+
+#new_book_form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(196, 164, 132);
+    width: 50vw;
+    height: 50vh;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+.form__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60%;
+}
+
+.form__wrapper label {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-weight: bold;
+    color: rgb(92, 64, 51);
+}
+
+.form__wrapper input {
+    height: 20px;
+    border-radius: 5px;
+    padding: 6px;
+    border: none;
+}
+
+.add_book_btn {
+    padding: 10px 5px;
+    border-radius: 10px;
+    background-color: rgb(92, 64, 51);
+    color: rgb(196, 164, 132);
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    opacity: 80%;
+    transition: opacity 0.4s cubic-bezier(0.5, 0.03, 0.685, 0.22);
+}
+
+.add_book_btn:hover {
+    opacity: 100%;
+    cursor: pointer;
+}
+
+.close_btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: rgb(92, 64, 51);
+    background: none;
+    border: none;
+}
+
+.close_btn:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.delete_book_btn {
+    position: absolute;
+    bottom: -25px;
+    font-size: 20px;
+    color: rgb(252, 27, 27);
+    background: none;
+    border: none;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 0;
+}
+
+.delete_book_btn:hover {
+    cursor: pointer;
+    opacity: 50%;
+}
+
+.book:hover .delete_book_btn {
+    transform: translateY(-120%);
+    opacity: 1;
+}
